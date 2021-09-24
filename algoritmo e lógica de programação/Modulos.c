@@ -23,8 +23,8 @@ int main()
     printf("quer calcular? (0)sim  (1)nao");
     scanf("%d",&c);
     if(c == 0){
-        dado();
-        total = Adicao();
+        dado(); //procedimento entrada
+        total = Adicao(); //funçao puxada
         printf("total-> (%d)",total);
     }else{
         printf("ate a proxima");
