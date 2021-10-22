@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      .contain {
+        /*container ondem iremos poder controlar os objetos filhos*/
+        /*Display flex ativamos no objeto mae*/
+        display: flex;
+
+        /*flex-direction ira colocar posiciona os objetos filho em linha(row) ou em coluna(column), por padrão ele fica em linha /
+
+        flex-direction: row;
+        /*
+
+        /*flex-wrap ira realizar a quebra de linha, pois o display flex nao ira quebra em linha os objetos /
+        
+        flex-wrap: wrap;
+        */
+
+        /*justify-content, Define o alinhamento dos item dentro de um container sendo movimentando os itens para a esquerda(flex-start), para direita(flex-end),para o meio(center) e até mesmo colocando um spacto entre os objetos(space-between)        
+        
+        justify-content:space-between ;
+
+        */
+
+        /*aling-items funciona praticamente igual ao justify-content, sendo que ele movimenta o eixo y do itens
+        aling-items:start;    -> no topo da pagina
+        aling-items:center;   -> no meio da pagina
+        aling-items:end;      -> no final da pagina
+        aling-items:stretch;  -> ocupar a pagina inteira
+        align-items:baseline; -> alinha os elementos atrave de uma linha no meio de cada objeto
+
+        link com pagina interativa -> https://www.w3schools.com/cssref/playit.asp?filename=playcss_align-items&preval=stretch
+        /
+
+        align-items: baseline;
+        */
+
+
+        /*ele a linha que tem dentro do container, ele consegue esconder melho aqueles espaçõs que ficam dentro do container.
+        align-content: flex-start;    -> joga os objetos para cima
+        align-content: center;        -> joga os objetos para o centro
+        align-content: flex-end;      -> joga os objetos para baixo do container
+        align-content: space-between; -> coloca um espaços entre os objetos
+        align-content: stretch;       -> ocupa todo o espaço do container
+
+        link com pagina interativa -> https://www.w3schools.com/cssref/playit.asp?filename=playcss_align-content&preval=stretch
+        */
+        align-content: center;
+      }
+
+      .child {
+        
+        width: 200px;
+        height: 200px;
+        background: aqua;
+        border: 1px solid black;
+      }
+      #child_tst{
+        width: 200px;
+        height: 200px;
+        background: aqua;
+        border: 1px solid black;
+
+        /*
+        Esta propriedade define a proporção com que um item deve crescer caso seja necessário. Por padrão seu valor é 0, o que indica que o item não deve crescer, e são aceitos apenas valores numéricos positivos /*
+
+        flex-grow: ;
+
+        /*
+
+        /* Esta propriedade define a proporção com que um item deve encolher caso seja necessário. Por padrão seu valor é 0, o que indica que o item não deve encolher, e são aceitos apenas valores numéricos positivos.  /*
+        
+        flex-shrink: 10;
+
+        */
+
+
+        /*O flex-basis define o tamanho inicial que um item deve ter antes que o espaço ao seu redor seja distribuído. Ou seja, dependendo da direção do eixo principal (horizontal ou vertical), essa propriedade define a largura ou altura mínima do elemento antes que ele seja redimensionado por outras propriedades.
+
+        auto (padrão) -> Respeita o comportamento definido no container por meio do align-items;
+        stretch       -> O item será esticado para preencher toda a dimensão do eixo transversal (altura ou largura);
+        flex-start    -> O item é deslocado para o início do eixo transversal;
+        flex-end      -> O item é deslocado para o final do eixo transversal;
+        center        -> O item é centralizado no eixo transversal;
+        baseline      -> O item é alinhado a partir da base da primeira linha de texto dos demais.
+        
+        flex-basis: 10;
+
+        */
+
+        /*Esta propriedade é uma forma abreviada para a escrita das propriedades flex-grow, flex-shrink e flex-basis, nesta ordem.
+        flex: [flex-grow] [flex-shrink] [flex-basis]
+
+        flex: 1,2,3;
+        */
+
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="contain">
+      <div id="child_tst">banana</div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+
+  </body>
+</html>
