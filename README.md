@@ -32,10 +32,5 @@ Basta copiar o codigo e colar no terminal do site
 
 
 ## 🛠 Inspiração (Portfolio / Currículo)
-- Link do meu currículo ↓  
-  Currículo: <https://#>
-- Link de porfolios 
-  - .
-
 - Link do meu linkedin ↓
   - [Murilo Perez](www.linkedin.com/in/murilo-perez)
