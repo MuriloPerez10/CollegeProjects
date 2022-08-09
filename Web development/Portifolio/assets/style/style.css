@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap');
+@import url(darkmode.css);
+@import url(animations.css);
+
+
+body{
+    color: #fefbfb;
+    background-color: #121214;
+    font-family: 'Fira Code', monospace;
+    transition: .5s;
+}
+
+h2{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+
+.btn{
+    padding: 5px 15px;
+    background: transparent;
+    border-radius: 10px;
+    color: #00e3a5;
+    border: solid 2px #00e3a5;
+    transition: .5s;
+    text-align: center;
+    align-items: center;
+}
+
+.btn:hover{
+    background: #00e3a5;
+    color: #000;
+}
+
+i{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+
+}
+
+.cubo{
+    width: 100%;
+    height: 300px;
+    background-color:#00e3a5 ;
+    border-radius: 10px;
+}
+
+.photo{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 10px solid #fefbfb;
+    background: #00e3a5;
+}
+.header{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.upper{
+    font-size: 50px;
+    padding:20px 0px;
+    border-right: 5px solid rgba(255, 255, 255, 0.75);
+    animation: cursorBlink .7s steps(40) infinite normal, typing 7s steps(100) normal 1 both;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0vw; 
+}
+
+.header_title{
+    margin-right: 100px;
+    line-height: 0px;
+}
+
+.header_title p {
+    font-size: 25px;
+    line-height: 0px;
+}
+
+.about_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about{
+    width: 500px;
+    font-size: 16px;
+}
+
+
+.projects-wrapper{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects{
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 19rem;
+    background: #202024;
+    transition: .5s;
+}
+
+#service-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service{
+    border-radius: 10px;
+    margin: 20px;
+    text-align: center;
+    width: 13rem;
+    background: #202024;
+    padding: 20px;
+}
+.service h2{
+    font-size: 20px;
+}
+
+.knowledge-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.descrpition{
+    width: 90vw;
+    text-align: center;
+}
+
+.knowledge{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.ferramentas{
+    border-radius: 5px;
+    background-color: #202024;
+    margin: 10px;
+    transition: .8s;
+    color: #00e3a5;
+}
+.ferramentas:hover{
+    background-color: #00e3a5;
+    color: #000;
+}
+
+.ferramentas i{
+    margin: auto;
+}
+
+footer{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div{
+    margin: auto;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+footer li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #202024;
+    margin:5px 10px;
+    display: flex;
+    justify-content: center;
+    transition: .5s;
+}
+footer li i{
+    margin: auto;
+}
+
+footer li:hover{
+    background-color: #00e3a5;
+}
+
+/*Site monitores maiores*/
+@media(min-width:1500px){
+    .projects-wrapper{
+        width: 75vw;
+    }
+}
+
+
+
+
+/*Site mobile*/
+@media(max-width:700px){
+    .button{
+        padding: 13px 20vw;
+        margin:auto;
+
+    }
+    .button i{
+        margin: auto;
+    }
+    
+
+
+    .header{
+        flex-direction: column-reverse;
+        text-align: center;
+        font-size: 25px;
+    }
+    .header a{
+        display: none;
+    }
+    .header_title{
+        margin:0;
+    }
+
+    .photo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .about{
+        font-size: 16px;
+        line-height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80vw;
+        text-align: center;
+    }
+    .cu{
+        display: none;
+    }
+
+
+
+    .projects-wrapper{
+        flex-direction: column;
+    }
+    
+    .projects{
+        margin: 15px;
+        width: auto;
+    }
+    .projects a{
+        padding: 7px 15px;
+        margin-right: 5px;
+    }
+
+    .service{
+        width: auto;
+        padding: 40px;
+    }
+
+
+    .knowledge-wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .descrpition{
+        width: 90%;
+        text-align: center;
+    }
+
+    .knowledge{
+        width: 70%;
+        flex-direction: column;
+    }
+
+    .cubo{
+        width: 100%;
+    }
+}

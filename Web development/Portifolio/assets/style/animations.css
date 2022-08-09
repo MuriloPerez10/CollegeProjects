@@ -1,0 +1,11 @@
+@keyframes cursorBlink {
+    100% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes typing {
+    100% {
+      max-width: 100vw;
+    }
+  }
