@@ -69,7 +69,7 @@ i{
     font-size: 50px;
     padding:20px 0px;
     border-right: 5px solid rgba(255, 255, 255, 0.75);
-    animation: cursorBlink .7s steps(40) infinite normal, typing 7s steps(100) normal 1 both;
+    animation: cursorBlink .5s steps(200) infinite normal, typing 7s steps(100) normal 1 both;
     overflow: hidden;
     white-space: nowrap;
     max-width: 0vw; 
@@ -231,6 +231,11 @@ footer li:hover{
     .header_title{
         margin:0;
     }
+    .upper{
+        animation-duration: 2s;
+        animation-iteration-count: step(200);
+    }
+
 
     .photo{
         width: 200px;

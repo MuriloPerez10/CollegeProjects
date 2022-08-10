@@ -1,23 +1,36 @@
+@import url(animations.css);
+
 #btn-d{
     position: fixed;
-    width: 100px;
-    height: 100px;
-    margin:80vh 0px 30px 0px;
-    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin:80vh 0px 0px -10px;
+    border-top-right-radius: 70%;
+    border-bottom-right-radius: 70%;
     cursor: pointer;
+    border: transparent;
+    transition: .7s;
 }
 
 .dark-mode .upper{
     border-color: #000;
 }
+/*buttons homepage*/
 .dark-mode .btn{
     border-color: #000;
 }
-
 .dark-mode .btn:hover{
     border-color:transparent ;
 }
-
+/*buttonDarkMode*/
+.dark-mode #btn-d{
+    background-color: #202024;
+    color: yellow;
+    animation: lampada infinite ease 2s;
+}
+.dark-mode .mobile-menu div{
+    background-color: #202024;
+}
 
 .dark-mode .projects {
     background: #c4c4c4;
