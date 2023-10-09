@@ -1,0 +1,89 @@
+Vejamos agora um exemplo de cookie. Para este exemplo, foram criados três arquivos
+
+O primeiro: uma página HTML que solicita uma informação.
+
+##GeraCookie.jsp
+
+<%@page language="java"%> 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+ 
+        <form method="post" action="GeraCookie.jsp"> 
+            <p> <b> Digite seu nome: </b> <input type="text" name="NOME"> </p>
+            <br> 
+            <input type="submit" value="Enviar Dados" /> 
+        </form> 
+ 
+        <hr>
+    </body>
+</html>
+
+
+O segundo: o arquivo GeraCookie.jsp, que foi chamado no arquivo anterior, irá receber os dados do formulário que o chamou e irá gerar um cookie
+
+##GeraCookie.jsp
+
+<%@page language = "java" import = "java.util.*"%> 
+<%  String nome = request.getParameter("NOME");
+    if (nome == null) {
+        nome = "";
+    }
+    Cookie meuCookie = new Cookie("nomeDoUsuario", nome);
+    meuCookie.setMaxAge(5);
+    response.addCookie(meuCookie);
+%> 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body> 
+        <p><a href="ExibirCookie.jsp">Veja valor do Cookie...</a></p> 
+    </body>
+</html>
+
+O terceiro: este arquivo, chamado de ExbirCookie.jsp, é o que vai identificar o cookie desejado no contêiner de cookies para retornar seu valor.
+
+##ExbirCookie.jsp
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" %> 
+<%
+    String cooNome = "nomeDoUsuario";
+    Cookie cookies[] = request.getCookies();
+    Cookie exemploCookieNome = null;
+    if (cookies != null) {
+        for (int i = 0; i < cookies.length; i++) {
+            if (cookies[i].getName().equals(cooNome)) {
+                exemploCookieNome = cookies[i];
+                break;
+            }
+        }
+    }
+%> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+ 
+        <%
+            if (exemploCookieNome == null) {
+                out.println("Nao foi encontrado cookie com o nome: <b>"
+                        + cooNome + "</b>");
+            } else {
+                out.println("Seja bem vindo: " + exemploCookieNome.getValue());
+            }
+        %> 
+    </body>
+</html>
